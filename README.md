@@ -1,8 +1,8 @@
 ## Roadmap
 
 -   [ ] Strona ma być zrobiona profesjonalnie
--   [x] Strona ma posiadać osobną podstronę "Oferta"
--   [x] Strona ma posiadać osobną podstronę "Kontakt"
+-   [ ] Strona ma posiadać osobną podstronę "Oferta"
+-   [ ] Strona ma posiadać osobną podstronę "Kontakt"
 -   [ ] Napisać autorski skrypt menu hamburgerowego
 -   [ ] Wykorzystać Scroll-spy na stronie
 -   [ ] Zapewnić przyjemny skok podczas zmiany sekcji

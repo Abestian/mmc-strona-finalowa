@@ -18,9 +18,23 @@
 
 <body>
 
-    <a href="/">Home</a>
-    <a href="/offer/">Oferta</a>
-    <a href="/contact/">Kontakt</a>
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <img src="./src/assets/icons/tree-svgrepo-com.svg" alt="Tree logo." class="nav-logo__logo">
+            <h1 class="nav-logo__title">Forest</h1>
+        </a>
+        <ul class="nav-mobile">
+            <a href="/">Home</a>
+            <a href="#about-us">O nas</a>
+            <a href="/offer/">Oferta</a>
+            <a href="/contact/">Kontakt</a>
+        </ul>
+        <button class="burger-btn">
+            <div class="burger-btn__line1"></div>
+            <div class="burger-btn__line2"></div>
+            <div class="burger-btn__line3"></div>
+        </button>
+    </nav>
 
 
     <script type="module" src="/src/main.js"></script>
