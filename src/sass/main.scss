@@ -1,22 +1,29 @@
 @use './reset';
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
 }
 
 .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	// border: 1px solid red;
+	background-color: #fff;
 	padding: 0.75em;
+	z-index: 5;
 
 	.nav-logo {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0.25em 0.5em;
+		padding: 0.5em 0.75em;
 		color: #333;
 
 		&__logo {
@@ -39,22 +46,22 @@ body {
 			height: 3px;
 			background-color: #333;
 		}
-
-		&:hover,
-		&:focus {
-			background-color: #333;
-		}
 	}
 
 	.nav-mobile {
-		display: none;
+		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		position: absolute;
-		top: 90px;
+		top: 80px;
+		transform: translateY(-120%);
 		left: 0;
 		width: 100%;
+		background-color: #fff;
+		padding-bottom: 1em;
+		transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+		z-index: -1;
 
 		a {
 			outline: none;
@@ -62,7 +69,7 @@ body {
 			text-align: center;
 			width: 100%;
 			font-size: 2.2rem;
-			color: #333;
+			color: #fff;
 			transition: color 0.3s, background-color 0.3s;
 
 			&:hover,
@@ -74,6 +81,64 @@ body {
 	}
 
 	.nav-active {
+		transform: translateY(0);
+
+		a {
+			color: #333;
+		}
+	}
+}
+
+.hero {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url('../assets/images/hero-small.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: #fff;
+	z-index: 0;
+
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -1;
+	}
+
+	&__text {
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 1em;
+		margin: 0 2em;
+		height: 100%;
+
+		h2 {
+			font-size: 2.8rem;
+			font-weight: normal;
+		}
+
+		p {
+			font-size: 3.2rem;
+			font-weight: bold;
+		}
+	}
+
+	&__skip {
+		position: absolute;
+		top: 92%;
+		left: 50%;
+		padding: 1em 1.5em;
+		transform: translate(-50%, -50%);
+
+		img {
+			height: 60px;
+		}
 	}
 }
