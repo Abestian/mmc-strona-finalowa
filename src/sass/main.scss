@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+	scroll-padding-top: 7em;
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
@@ -172,6 +177,7 @@ body {
 			left: 50%;
 			padding: 1em 1.5em;
 			transform: translate(-50%, -50%);
+			animation: jingle 2.5s linear infinite;
 
 			img {
 				height: 60px;
@@ -255,5 +261,19 @@ body {
 
 	100% {
 		right: 130vw;
+	}
+}
+
+@keyframes jingle {
+	0% {
+		top: 92%;
+	}
+
+	50% {
+		top: 94%;
+	}
+
+	100% {
+		top: 92%;
 	}
 }

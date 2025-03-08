@@ -19,6 +19,7 @@ const closeNav = () => {
 	navItems.forEach(item =>
 		item.addEventListener('click', () => {
 			navMobile.classList.remove('nav-active');
+			burgerBtn.classList.remove('burger-active')
 		})
 	);
 };
