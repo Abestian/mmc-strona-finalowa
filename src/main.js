@@ -6,11 +6,21 @@ const burgerBtn = document.querySelector('.burger-btn');
 const navMobile = document.querySelector('.nav-mobile');
 const eyecatcher = document.querySelector('.eyecatcher');
 const movingText = document.querySelector('.eyecatcher__moving-text');
+const navItems = document.querySelectorAll('.nav-link');
 
 const handleNav = () => {
 	navMobile.classList.toggle('nav-active');
 	burgerBtn.classList.toggle('burger-active');
 	navMobile.style.visibility = 'visible';
+	closeNav();
+};
+
+const closeNav = () => {
+	navItems.forEach(item =>
+		item.addEventListener('click', () => {
+			navMobile.classList.remove('nav-active');
+		})
+	);
 };
 
 function isInViewport(item) {

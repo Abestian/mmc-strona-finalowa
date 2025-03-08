@@ -94,7 +94,7 @@ body {
 			opacity: 0;
 			visibility: hidden;
 
-			a {
+			.nav-link {
 				outline: none;
 				padding: 1em;
 				text-align: center;
@@ -115,7 +115,7 @@ body {
 			opacity: 1;
 			transform: translateY(0);
 
-			a {
+			.nav-link {
 				color: #333;
 			}
 		}
