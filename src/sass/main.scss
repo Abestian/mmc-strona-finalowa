@@ -210,6 +210,7 @@ body {
 	height: 250px;
 	background-image: url('../assets/images/eyecatcher-small.jpg');
 	background-position: center;
+	background-repeat: no-repeat;
 	z-index: 0;
 
 	&__shadow {
@@ -223,13 +224,36 @@ body {
 	}
 
 	&__text-border {
+		position: relative;
 		width: 80%;
-		height: 5em;
+		height: 7em;
 		border: 2px solid #fff;
+		overflow: hidden;
+	}
 
-		p {
-			font-size: 1rem;
-			color: #fff;
-		}
+	&__moving-text {
+		top: 50%;
+		transform: translateY(-50%);
+		white-space: nowrap;
+		position: absolute;
+		right: -80vw;
+		width: 100%;
+		font-size: 4rem;
+		color: #fff;
+		font-weight: 600;
+	}
+
+	.animation {
+		animation: movingText 10s linear infinite;
+	}
+}
+
+@keyframes movingText {
+	0% {
+		right: -80vw;
+	}
+
+	100% {
+		right: 130vw;
 	}
 }
