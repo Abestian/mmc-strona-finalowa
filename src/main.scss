@@ -294,37 +294,6 @@ body {
 	}
 }
 
-@media (width > 1200px) {
-	.navbar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		padding: 0.75em 0;
-		width: 100%;
-		background-color: $secondary-color;
-		z-index: 3;
-
-		&__content {
-			width: 92.5%;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-
-			.nav-mobile {
-				display: none;
-			}
-
-			.burger-btn {
-				display: none;
-			}
-
-			.nav-desktop {
-				display: flex;
-				list-style: none;
-			}
-		}
-	}
-}
 
 @keyframes movingText {
 	0% {

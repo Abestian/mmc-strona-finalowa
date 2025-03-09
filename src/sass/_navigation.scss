@@ -22,6 +22,7 @@
 		align-items: center;
 		padding: 0.5em 0.75em;
 		color: $main-color;
+		cursor: pointer;
 	}
 
 	&__logo-img {
@@ -93,7 +94,6 @@
 		padding: 1em 0;
 		display: block;
 		width: 100%;
-		width: 100%;
 		height: 100%;
 		color: $main-color;
 		transition: color 0.5s, background-color 0.3s;
@@ -113,34 +113,53 @@
 	visibility: visible;
 }
 
-@media (width > 1200px) {
+@media (width > 992px) {
 	.navbar {
 		&__content {
+			// border: 2px solid lime;
+			height: 100%;
 		}
 
 		&__logo {
+			padding: 0.75em 1em;
 		}
 
 		&__logo-img {
+			height: 48px;
 		}
 
 		&__logo-title {
+			font-size: 4.8rem;
 		}
 
 		&__menu {
 			display: flex;
+			list-style: none;
 		}
 
 		&__item {
+			font-size: 2rem;
 		}
 
 		&__link {
+			padding: 2em;
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: $main-color;
+			transition: color 0.5s, background-color 0.3s;
+			outline: none;
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				color: $secondary-color;
+				background-color: $main-color;
+			}
 		}
 
 		&__burger {
-		}
-
-		&__burger-line {
+			display: none;
 		}
 	}
 
