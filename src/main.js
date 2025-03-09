@@ -1,6 +1,6 @@
 'use strict';
 
-import './sass/main.scss';
+import './main.scss';
 
 const burgerBtn = document.querySelector('.burger-btn');
 const navMobile = document.querySelector('.nav-mobile');
