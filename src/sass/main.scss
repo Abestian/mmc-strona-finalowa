@@ -231,7 +231,7 @@ body {
 
 	&__text-border {
 		position: relative;
-		width: 80%;
+		width: 85%;
 		height: 7em;
 		border: 2px solid #fff;
 		overflow: hidden;
@@ -249,8 +249,86 @@ body {
 		font-weight: 600;
 	}
 
-	.animation {
-		animation: movingText 10s linear infinite;
+	// .animation {
+	// 	animation: movingText 10s linear infinite;
+	// }
+}
+
+.offer-text {
+	font-size: 2.8rem;
+	text-align: center;
+	margin-bottom: 2.5em;
+}
+
+.offer-box {
+	display: flex;
+	gap: 3em;
+
+	.offer-card {
+		padding: 2em 3em;
+		max-width: 400px;
+		min-width: 300px;
+		text-align: center;
+		border-radius: 8px;
+		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+
+		&__title {
+			margin-bottom: 0.5em;
+			font-size: 3rem;
+			font-weight: normal;
+		}
+
+		&__price {
+			font-size: 5rem;
+			font-weight: 600;
+		}
+
+		&__list {
+			margin: 2em 0 3em;
+			list-style: none;
+
+			.list-element {
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				gap: 0.75em;
+				margin-bottom: 0.5em;
+				color: #333;
+
+				&--inactive {
+					color: #989797;
+				}
+
+				img {
+					width: 20px;
+				}
+
+				span {
+					text-align: left;
+					font-size: 1.8rem;
+				}
+			}
+		}
+
+		&__button {
+			display: block;
+			width: 100%;
+			padding: 0.5em;
+			font-size: 2rem;
+			border-radius: 8px;
+			box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+			transition: color 0.3s, background-color 0.3s;
+
+			&--special {
+				background-color: #2ade72;
+			}
+
+			&:hover,
+			&:focus {
+				color: #fff;
+				background-color: #333;
+			}
+		}
 	}
 }
 
