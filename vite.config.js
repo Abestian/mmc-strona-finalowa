@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig(() => {
-	base: '/mmc-strona-finalowa';
+	base: '/mmc-strona-finalowa/';
 
 	return {
 		plugins: [
