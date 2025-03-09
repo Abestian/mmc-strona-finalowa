@@ -7,6 +7,7 @@ const navMobile = document.querySelector('.nav-mobile');
 const eyecatcher = document.querySelector('.eyecatcher');
 const movingText = document.querySelector('.eyecatcher__moving-text');
 const navItems = document.querySelectorAll('.nav-link');
+const footerLinks = document.querySelectorAll('.footer-link');
 
 const handleNav = () => {
 	navMobile.classList.toggle('nav-active');
@@ -19,7 +20,7 @@ const closeNav = () => {
 	navItems.forEach(item =>
 		item.addEventListener('click', () => {
 			navMobile.classList.remove('nav-active');
-			burgerBtn.classList.remove('burger-active')
+			burgerBtn.classList.remove('burger-active');
 		})
 	);
 };
@@ -33,6 +34,14 @@ function isInViewport(item) {
 		bounding.bottom <= window.innerHeight + item.offsetHeight
 	);
 }
+
+footerLinks.forEach(item => {
+	item.addEventListener('click', e => {
+		const link = e.target.innerHTML;
+		e.preventDefault();
+		alert(`Podstrona "${link}", do której chcesz się dostać, niestety nie istnieje. Przepraszamy za utrudnienia.`);
+	});
+});
 
 burgerBtn.addEventListener('click', handleNav);
 
