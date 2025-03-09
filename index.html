@@ -12,23 +12,30 @@
 
     <nav class="navbar">
         <div class="navbar__content wrapper">
-            <a href="./" class="nav-logo">
-                <img src="./src/assets/icons/tree-svgrepo-com.svg" alt="Tree logo." class="nav-logo__logo">
-                <h1 class="nav-logo__title">Forest</h1>
+            <a href="./" class="navbar__logo">
+                <img src="./src/assets/icons/tree-svgrepo-com.svg" alt="Tree logo." class="navbar__logo-img">
+                <h1 class="navbar__logo-title">Forest</h1>
             </a>
-            <ul class="nav-mobile">
-                <a class="nav-link" href="./">Home</a>
-                <a class="nav-link" href="#aboutus">O nas</a>
-                <a class="nav-link" href="#offer">Oferta</a>
-                <a class="nav-link" href="./contact/">Kontakt</a>
+            <ul class="navbar__menu navbar__menu--mobile">
+                <li class="navbar__item"><a class="navbar__link" href="./">Home</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#aboutus">O nas</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#offer">Oferta</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="./contact/">Kontakt</a></li>
             </ul>
-            <button class="burger-btn">
-                <div class="burger-btn__line1"></div>
-                <div class="burger-btn__line2"></div>
-                <div class="burger-btn__line3"></div>
+            <ul class="navbar__menu navbar__menu--desktop">
+                <li class="navbar__item"><a class="navbar__link" href="./">Home</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#aboutus">O nas</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#offer">Oferta</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="./contact/">Kontakt</a></li>
+            </ul>
+            <button class="navbar__burger">
+                <div class="navbar__burger-line"></div>
+                <div class="navbar__burger-line"></div>
+                <div class="navbar__burger-line"></div>
             </button>
         </div>
     </nav>
+
 
     <header class="hero-img">
         <div class="hero wrapper">

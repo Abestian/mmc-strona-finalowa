@@ -21,7 +21,7 @@ body {
 .wrapper {
 	margin: 0 auto;
 	width: 85%;
-	max-width: 1200px;
+	max-width: 1450px;
 }
 
 .nav-logo,
@@ -48,7 +48,6 @@ body {
 	padding: 0.75em 0;
 	width: 100%;
 	background-color: $secondary-color;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 	z-index: 3;
 
 	&__content {
@@ -96,15 +95,16 @@ body {
 			align-items: center;
 			position: absolute;
 			top: 80px;
-			transform: translateY(-120%);
 			left: 0;
+			padding-bottom: 1em;
+			transform: translateY(-120%);
 			width: 100%;
 			background-color: $secondary-color;
-			padding-bottom: 1em;
 			transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),
 				opacity 0.4s cubic-bezier(0.86, 0.5, 0.7, 0.27);
-			z-index: -100;
+			z-index: 4;
 			opacity: 0;
+			list-style: none;
 			visibility: hidden;
 
 			.nav-link {
@@ -412,6 +412,38 @@ body {
 	&__copyright {
 		margin-top: 2em;
 		text-align: center;
+	}
+}
+
+@media (width > 1200px) {
+	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 0.75em 0;
+		width: 100%;
+		background-color: $secondary-color;
+		z-index: 3;
+
+		&__content {
+			width: 92.5%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.nav-mobile {
+				display: none;
+			}
+
+			.burger-btn {
+				display: none;
+			}
+
+			.nav-desktop {
+				display: flex;
+				list-style: none;
+			}
+		}
 	}
 }
 

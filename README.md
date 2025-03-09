@@ -10,3 +10,8 @@
 -   [x] Po zjechaniu na sekcję "Oferta" był odnośnik do podstrony z innymi ofertami
 -   [ ] Na podstronie "Kontakt" ma być formularz kontaktowy oraz mapa z Google Maps wskazująca na restaurację McDonald's na ul. Jasnogórskiej 2 w Krakowie
 -   [x] Na stronie wykorzystać darmowe ikonki
+
+### Do poprawy
+
+-   [ ] Zmienić dynamikę pojawiania się napisu w sekcji 'eyecatcher' na urządzeniach mobilnych
+-   [ ] Dopracować pojawianie się nawigacji na urządzeniach mobilnych
