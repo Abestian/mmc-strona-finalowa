@@ -2,24 +2,27 @@
 
 import './main.scss';
 
-const burgerBtn = document.querySelector('.burger-btn');
-const navMobile = document.querySelector('.nav-mobile');
+// nav
+const navbar = document.querySelector('.navbar');
+const burgerBtn = document.querySelector('.navbar__burger');
+const navMobile = document.querySelector('.navbar-mobile');
+const navItems = document.querySelectorAll('.navbar-mobile__link');
+
 const eyecatcher = document.querySelector('.eyecatcher');
 const movingText = document.querySelector('.eyecatcher__moving-text');
-const navItems = document.querySelectorAll('.nav-link');
+
 const footerLinks = document.querySelectorAll('.footer-link');
 
 const handleNav = () => {
-	navMobile.classList.toggle('nav-active');
+	navMobile.classList.toggle('navbar-mobile-active');
 	burgerBtn.classList.toggle('burger-active');
-	navMobile.style.visibility = 'visible';
 	closeNav();
 };
 
 const closeNav = () => {
 	navItems.forEach(item =>
 		item.addEventListener('click', () => {
-			navMobile.classList.remove('nav-active');
+			navMobile.classList.remove('navbar-mobile-active');
 			burgerBtn.classList.remove('burger-active');
 		})
 	);
@@ -50,3 +53,14 @@ window.addEventListener('scroll', function () {
 		movingText.classList.add('animation');
 	}
 });
+
+/* const prevScrollPos = window.scrollY;
+window.onscroll = function () {
+	const currentScrollPos = this.window.scrollY;
+	if (prevScrollPos > currentScrollPos) {
+		navbar.style.top = '0';
+	} else {
+		navbar.style.top = '-100px';
+	}
+	prevScrollPos = currentScrollPos;
+}; */

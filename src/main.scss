@@ -1,138 +1,17 @@
 @use './sass/reset';
+@use './sass/navigation';
+@use './sass/colors' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-$main-color: #333;
-$secondary-color: #fff;
-$special-color: #2ade72;
-$inactive-color: #989797;
-$footer-color: #f5f5f5;
-
 html {
-	scroll-padding-top: 7em;
+	scroll-padding-top: 57px;
 	scroll-behavior: smooth;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
-}
-
-.wrapper {
-	margin: 0 auto;
-	width: 85%;
-	max-width: 1450px;
-}
-
-.nav-logo,
-.footer-logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0.5em 0.75em;
-	color: $main-color;
-
-	&__logo {
-		height: 32px;
-	}
-
-	&__title {
-		font-size: 3.2rem;
-	}
-}
-
-.navbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	padding: 0.75em 0;
-	width: 100%;
-	background-color: $secondary-color;
-	z-index: 3;
-
-	&__content {
-		width: 92.5%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		.burger-btn {
-			padding: 0.75em 1.25em;
-			background: none;
-			border-radius: 8px;
-			transition: transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-
-			div {
-				margin: 7px;
-				width: 35px;
-				height: 3px;
-				background-color: $main-color;
-				transition: transform 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 0.45s;
-			}
-		}
-
-		.burger-active {
-			transform: translateX(12%);
-
-			div:nth-child(1) {
-				transform: rotate(45deg) translateY(450%);
-			}
-
-			div:nth-child(2) {
-				transform: translateX(50%);
-				opacity: 0;
-			}
-
-			div:last-child {
-				transform: rotate(-45deg) translateY(-500%);
-			}
-		}
-
-		.nav-mobile {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			position: absolute;
-			top: 80px;
-			left: 0;
-			padding-bottom: 1em;
-			transform: translateY(-120%);
-			width: 100%;
-			background-color: $secondary-color;
-			transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),
-				opacity 0.4s cubic-bezier(0.86, 0.5, 0.7, 0.27);
-			z-index: 4;
-			opacity: 0;
-			list-style: none;
-			visibility: hidden;
-
-			.nav-link {
-				outline: none;
-				padding: 1em;
-				text-align: center;
-				width: 100%;
-				font-size: 2.2rem;
-				color: $secondary-color;
-				transition: color 0.5s, background-color 0.3s;
-
-				&:hover,
-				&:focus {
-					color: $secondary-color;
-					background-color: $main-color;
-				}
-			}
-		}
-
-		.nav-active {
-			opacity: 1;
-			transform: translateY(0);
-
-			.nav-link {
-				color: $main-color;
-			}
-		}
-	}
 }
 
 .hero-img {

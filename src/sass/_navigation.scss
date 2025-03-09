@@ -1,0 +1,150 @@
+@use './colors' as *;
+@use './utilities';
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $secondary-color;
+	transition: top 0.3s;
+	z-index: 3;
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 95%;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		padding: 0.5em 0.75em;
+		color: $main-color;
+	}
+
+	&__logo-img {
+		height: 32px;
+	}
+
+	&__logo-title {
+		font-size: 3.2rem;
+		font-weight: 450;
+	}
+
+	&__menu {
+		display: none;
+	}
+
+	&__burger {
+		padding: 0.75em 1.25em;
+		background: none;
+		border-radius: 8px;
+		transition: transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+		cursor: pointer;
+	}
+
+	.burger-active {
+		transform: translateX(12%);
+
+		div:nth-child(1) {
+			transform: rotate(45deg) translateY(450%);
+		}
+
+		div:nth-child(2) {
+			transform: translateX(50%);
+			opacity: 0;
+		}
+
+		div:last-child {
+			transform: rotate(-45deg) translateY(-500%);
+		}
+	}
+
+	&__burger-line {
+		margin: 7px;
+		width: 35px;
+		height: 3px;
+		background-color: $main-color;
+		transition: transform 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 0.45s;
+	}
+}
+
+.navbar-mobile {
+	text-align: center;
+	position: fixed;
+	top: 57px;
+	left: 0;
+	transform: translateY(-100%);
+	width: 100%;
+	background-color: $secondary-color;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95), visibility 0.3s;
+	z-index: 2;
+	list-style: none;
+	visibility: hidden;
+
+	&__item {
+		font-size: 2.4rem;
+	}
+
+	&__link {
+		padding: 1em 0;
+		display: block;
+		width: 100%;
+		width: 100%;
+		height: 100%;
+		color: $main-color;
+		transition: color 0.5s, background-color 0.3s;
+		outline: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			color: $secondary-color;
+			background-color: $main-color;
+		}
+	}
+}
+
+.navbar-mobile-active {
+	transform: translateY(0);
+	visibility: visible;
+}
+
+@media (width > 1200px) {
+	.navbar {
+		&__content {
+		}
+
+		&__logo {
+		}
+
+		&__logo-img {
+		}
+
+		&__logo-title {
+		}
+
+		&__menu {
+			display: flex;
+		}
+
+		&__item {
+		}
+
+		&__link {
+		}
+
+		&__burger {
+		}
+
+		&__burger-line {
+		}
+	}
+
+	.navbar-mobile {
+		display: none;
+	}
+}
