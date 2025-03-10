@@ -1,12 +1,17 @@
 @use './sass/sass_utilities/utilities.scss' as *;
-@use './sass/navigation';
-@use './sass/hero';
+@use './sass/sass_website_parts/parts.scss' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
 	scroll-padding-top: 57px;
 	scroll-behavior: smooth;
+}
+
+@media (width > 992px) {
+	html {
+		scroll-padding-top: 100px;
+	}
 }
 
 body {

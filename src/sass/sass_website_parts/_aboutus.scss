@@ -1,0 +1,78 @@
+@use '../sass_utilities/utilities.scss' as *;
+
+.about {
+	&__content {
+		padding: 5em 0;
+	}
+
+	&__title {
+		margin-bottom: 2em;
+		font-size: 3.4rem;
+		font-weight: 450;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__description {
+		display: grid;
+		grid-auto-rows: auto;
+		gap: 1.5em;
+	}
+
+	&__subtitle {
+		font-size: 2.4rem;
+	}
+
+	&__text {
+		font-size: 1.8rem;
+	}
+
+	&__image {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 450px;
+	}
+}
+
+@media (width > 1150px) {
+	.about {
+		&__content {
+			padding: 6em 0;
+			max-width: 1300px;
+		}
+
+		&__title {
+			margin-bottom: 1.5em;
+			font-size: 4.8rem;
+		}
+
+		&__description {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 0.5fr, repeat(2, 2fr);
+			gap: 0.5em;
+			column-gap: 5em;
+		}
+
+		&__subtitle {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			font-size: 3.2rem;
+		}
+
+		&__text {
+			grid-column: 2/3;
+			grid-row: 2/3;
+			font-size: clamp(1.8rem, 1.5vw, 2.2rem);
+
+			&:last-child {
+				grid-row: 3/4;
+			}
+		}
+
+		&__image {
+			grid-column: 1/2;
+			grid-row: 1/4;
+			max-width: 2000px;
+		}
+	}
+}
