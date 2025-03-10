@@ -1,6 +1,6 @@
-@use './sass/reset';
+@use './sass/sass_utilities/utilities.scss' as *;
 @use './sass/navigation';
-@use './sass/colors' as *;
+@use './sass/hero';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -12,64 +12,6 @@ html {
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
-}
-
-.hero-img {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	background-image: url('./assets/images/hero-medium.jpg');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	color: $secondary-color;
-	z-index: 0;
-
-	.hero {
-		height: 100vh;
-
-		&__shadow {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.65);
-			z-index: -1;
-		}
-
-		&__text {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
-			gap: 1em;
-			height: 100%;
-
-			h2 {
-				font-size: 2.8rem;
-				font-weight: normal;
-			}
-
-			p {
-				font-size: 3.2rem;
-				font-weight: bold;
-			}
-		}
-
-		&__skip {
-			position: absolute;
-			top: 92%;
-			left: 50%;
-			padding: 1em 1.5em;
-			transform: translate(-50%, -50%);
-			animation: jingle 2.5s linear infinite;
-
-			img {
-				height: 60px;
-			}
-		}
-	}
 }
 
 .section {
@@ -291,30 +233,5 @@ body {
 	&__copyright {
 		margin-top: 2em;
 		text-align: center;
-	}
-}
-
-
-@keyframes movingText {
-	0% {
-		right: -80vw;
-	}
-
-	100% {
-		right: 160vw;
-	}
-}
-
-@keyframes jingle {
-	0% {
-		top: 92%;
-	}
-
-	50% {
-		top: 94%;
-	}
-
-	100% {
-		top: 92%;
 	}
 }

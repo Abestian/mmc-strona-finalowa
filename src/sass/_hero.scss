@@ -1,0 +1,90 @@
+@use './sass_utilities/utilities.scss' as *;
+
+.hero {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	color: $secondary-color;
+	background-image: url('./assets/images/hero-medium.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 0;
+
+	&__content {
+		height: 100vh;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 0.5em;
+		height: 100%;
+	}
+
+	&__title {
+		font-size: 2.8rem;
+		font-weight: normal;
+	}
+
+	&__description {
+		font-size: clamp(3.2rem, 4vw, 4.8rem);
+		font-weight: bold;
+	}
+
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.65);
+		z-index: -1;
+	}
+
+	&__skip {
+		position: absolute;
+		top: 92%;
+		left: 50%;
+		padding: 1em 1.5em;
+		transform: translate(-50%, -50%);
+		animation: jingle 2.5s linear infinite;
+	}
+
+	&__skip-icon {
+		height: 60px;
+	}
+}
+
+@media (width > 992px) {
+	.hero {
+		position: relative;
+		width: 100%;
+		height: 600px;
+		color: $secondary-color;
+		background-image: url('./assets/images/hero-medium.jpg');
+		background-size: cover;
+		background-position: bottom;
+		background-attachment: fixed;
+		z-index: 0;
+
+		&__content {
+			height: 700px;
+		}
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 0.5em;
+			height: 100%;
+		}
+
+		&__skip {
+			display: none;
+		}
+	}
+}

@@ -1,5 +1,4 @@
-@use './colors' as *;
-@use './utilities';
+@use './sass_utilities/utilities.scss' as *;
 
 .navbar {
 	position: fixed;
@@ -116,7 +115,6 @@
 @media (width > 992px) {
 	.navbar {
 		&__content {
-			// border: 2px solid lime;
 			height: 100%;
 		}
 

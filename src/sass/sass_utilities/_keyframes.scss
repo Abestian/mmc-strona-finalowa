@@ -1,0 +1,23 @@
+@keyframes movingText {
+	0% {
+		right: -80vw;
+	}
+
+	100% {
+		right: 160vw;
+	}
+}
+
+@keyframes jingle {
+	0% {
+		top: 92%;
+	}
+
+	50% {
+		top: 94%;
+	}
+
+	100% {
+		top: 92%;
+	}
+}
