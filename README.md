@@ -13,6 +13,6 @@
 
 ### Do poprawy
 
--   [ ] Zmienić dynamikę pojawiania się napisu w sekcji 'eyecatcher' na urządzeniach mobilnych
+-   [x] Zmienić dynamikę pojawiania się napisu w sekcji 'banner' na urządzeniach mobilnych
 -   [x] Dopracować pojawianie się nawigacji na urządzeniach mobilnych
 -   [ ] Dodać chowanie się nawigacji podczas scrollowania w dół i pojawienie się jej, podczas scrollowania w górę

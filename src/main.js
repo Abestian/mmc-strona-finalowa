@@ -8,8 +8,8 @@ const burgerBtn = document.querySelector('.navbar__burger');
 const navMobile = document.querySelector('.navbar-mobile');
 const navItems = document.querySelectorAll('.navbar-mobile__link');
 
-const eyecatcher = document.querySelector('.eyecatcher');
-const movingText = document.querySelector('.eyecatcher__moving-text');
+const banner = document.querySelector('.banner');
+const bannerText = document.querySelectorAll('.banner__text-list');
 
 const footerLinks = document.querySelectorAll('.footer-link');
 
@@ -49,8 +49,10 @@ footerLinks.forEach(item => {
 burgerBtn.addEventListener('click', handleNav);
 
 window.addEventListener('scroll', function () {
-	if (isInViewport(eyecatcher)) {
-		movingText.classList.add('animation');
+	if (isInViewport(banner) && this.document.documentElement.clientWidth < 620) {
+		bannerText.forEach(text => {
+			text.classList.add('animation-active');
+		});
 	}
 });
 

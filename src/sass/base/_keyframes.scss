@@ -1,10 +1,6 @@
 @keyframes movingText {
-	0% {
-		right: -80vw;
-	}
-
-	100% {
-		right: 160vw;
+	to {
+		transform: translateX(calc(-100% - 150px));
 	}
 }
 
