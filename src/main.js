@@ -1,6 +1,6 @@
 'use strict';
 
-import './main.scss';
+import './sass/main.scss';
 
 // nav
 const navbar = document.querySelector('.navbar');
