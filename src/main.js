@@ -2,7 +2,6 @@
 
 import './sass/main.scss';
 
-// nav
 const navbar = document.querySelector('.navbar');
 const burgerBtn = document.querySelector('.navbar__burger');
 const navMobile = document.querySelector('.navbar-mobile');
@@ -49,20 +48,42 @@ footerLinks.forEach(item => {
 burgerBtn.addEventListener('click', handleNav);
 
 window.addEventListener('scroll', function () {
-	if (isInViewport(banner) && this.document.documentElement.clientWidth < 620) {
+	if (isInViewport(banner) && document.documentElement.clientWidth < 620) {
 		bannerText.forEach(text => {
 			text.classList.add('animation-active');
 		});
 	}
 });
 
-/* const prevScrollPos = window.scrollY;
-window.onscroll = function () {
-	const currentScrollPos = this.window.scrollY;
-	if (prevScrollPos > currentScrollPos) {
-		navbar.style.top = '0';
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function () {
+	const scrollTop = window.scrollY || document.documentElement.scrollTop;
+	const isDesktop = document.documentElement.clientWidth > 992;
+	const isBurgerActive = burgerBtn.classList.contains('burger-active');
+
+	if (scrollTop > lastScrollTop) {
+		if (isDesktop) {
+			navbar.style.top = '-104px';
+		} else {
+			navbar.style.top = isBurgerActive ? '0' : '-57px';
+		}
 	} else {
-		navbar.style.top = '-100px';
+		navbar.style.top = '0';
 	}
-	prevScrollPos = currentScrollPos;
+
+	lastScrollTop = scrollTop;
+});
+
+/* window.onscroll = function (e) {
+	const scrollCheck = this.oldScroll > this.scrollY;
+	this.oldScroll = this.scrollY;
+
+	let padding;
+
+	if (scrollCheck) {
+		document.documentElement.style.scrollPaddingTop = '55px';
+	} else {
+		document.documentElement.style.scrollPaddingTop = '0px';
+	}
 }; */

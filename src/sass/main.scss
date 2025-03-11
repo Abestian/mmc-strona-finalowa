@@ -3,7 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-html {
+/* html {
 	scroll-padding-top: 55px;
 	scroll-behavior: smooth;
 }
@@ -12,27 +12,11 @@ html {
 	html {
 		scroll-padding-top: 100px;
 	}
-}
+} */
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
-}
-
-.banner {
-
-	&__moving-text {
-		transform: translateY(-50%);
-		white-space: nowrap;
-		width: 100%;
-		font-size: 4rem;
-		color: $secondary-color;
-		font-weight: 600;
-	}
-
-	.animation {
-		animation: movingText 10s linear infinite;
-	}
 }
 
 .offer-text {
