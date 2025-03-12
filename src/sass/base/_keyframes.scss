@@ -17,3 +17,28 @@
 		top: 92%;
 	}
 }
+
+@keyframes textEnter {
+	0% {
+		transform: translateX(100%);
+	}
+	20% {
+		transform: translateX(50%);
+	}
+
+	40% {
+		transform: translateX(0);
+	}
+
+	60% {
+		transform: translateX(-15%);
+	}
+
+	80% {
+		transform: translateX(-7.5%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}

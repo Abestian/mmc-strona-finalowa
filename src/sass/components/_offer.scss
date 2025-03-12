@@ -9,17 +9,15 @@
 
 	&__cards {
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		justify-content: center;
-		align-items: center;
 		gap: 3em;
 	}
 
 	&__card {
+		flex: 1 1 min(300px, 100%);
 		padding: 2em 3em;
-		width: 100%;
-		max-width: 400px;
-		min-width: 260px;
+		max-width: 350px;
 		text-align: center;
 		border-radius: 8px;
 		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
@@ -115,15 +113,6 @@
 
 @media (width > 1200px) {
 	.offer {
-
-		&__cards {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			gap: 3em;
-		}
-
 		&__card {
 			transition: scale 0.3s;
 			&:hover {

@@ -1,4 +1,4 @@
-## Roadmap
+## To-do wymagane
 
 -   [ ] Strona ma być zrobiona profesjonalnie
 -   [ ] Strona ma posiadać osobną podstronę "Oferta"
@@ -11,10 +11,11 @@
 -   [ ] Na podstronie "Kontakt" ma być formularz kontaktowy oraz mapa z Google Maps wskazująca na restaurację McDonald's na ul. Jasnogórskiej 2 w Krakowie
 -   [x] Na stronie wykorzystać darmowe ikonki
 
-### Do poprawy
+### To-do własne
 
 -   [x] Zmienić dynamikę pojawiania się napisu w sekcji 'banner' na urządzeniach mobilnych
 -   [x] Dopracować pojawianie się nawigacji na urządzeniach mobilnych
 -   [x] Dodać chowanie się nawigacji podczas scrollowania w dół i pojawienie się jej, podczas scrollowania w górę
 -   [ ] Poprawić scroll-padding-top w kontekście działania nawigacji (może współpraca ze scroll-spy??)
 -   [ ] Przerobić odnośnik do podstrony 'Oferta'
+-   [ ] Dodać animację banneru na ekranach dekstopowych

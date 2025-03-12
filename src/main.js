@@ -8,6 +8,7 @@ const navMobile = document.querySelector('.navbar-mobile');
 const navItems = document.querySelectorAll('.navbar-mobile__link');
 
 const banner = document.querySelector('.banner');
+const bannerTextBorder = document.querySelector('.banner__text-border');
 const bannerText = document.querySelectorAll('.banner__text-list');
 
 const footerLinks = document.querySelectorAll('.footer-link');
@@ -48,7 +49,12 @@ footerLinks.forEach(item => {
 burgerBtn.addEventListener('click', handleNav);
 
 window.addEventListener('scroll', function () {
-	if (isInViewport(banner) && document.documentElement.clientWidth < 620) {
+	if (isInViewport(banner) && document.documentElement.clientWidth > 620) {
+		bannerTextBorder.classList.add('animation-active');
+		bannerText.forEach(text => {
+			text.classList.add('animation-active');
+		});
+	} else {
 		bannerText.forEach(text => {
 			text.classList.add('animation-active');
 		});
