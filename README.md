@@ -17,3 +17,4 @@
 -   [x] Dopracować pojawianie się nawigacji na urządzeniach mobilnych
 -   [x] Dodać chowanie się nawigacji podczas scrollowania w dół i pojawienie się jej, podczas scrollowania w górę
 -   [ ] Poprawić scroll-padding-top w kontekście działania nawigacji (może współpraca ze scroll-spy??)
+-   [ ] Przerobić odnośnik do podstrony 'Oferta'
