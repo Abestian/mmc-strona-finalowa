@@ -1,0 +1,114 @@
+@use '../base/' as *;
+
+.offer {
+	&__text {
+		margin-bottom: 2.5em;
+		font-size: 2.8rem;
+		text-align: center;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 3em;
+	}
+
+	&__card {
+		padding: 2em 3em;
+		width: 100%;
+		max-width: 400px;
+		min-width: 260px;
+		text-align: center;
+		border-radius: 8px;
+		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+	}
+
+	&__card-title {
+		margin-bottom: 0.5em;
+		font-size: 3rem;
+		font-weight: normal;
+	}
+
+	&__card-price {
+		font-size: 5rem;
+		font-weight: 600;
+	}
+
+	&__card-list {
+		margin: 2em 0 3em;
+		list-style: none;
+	}
+
+	&__card-list-item {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 0.75em;
+		margin-bottom: 0.5em;
+		color: $main-color;
+
+		&--inactive {
+			color: $inactive-color;
+		}
+
+		img {
+			width: 20px;
+		}
+
+		span {
+			text-align: left;
+			font-size: 1.8rem;
+		}
+	}
+
+	&__card-button {
+		display: block;
+		padding: 0.5em;
+		width: 100%;
+		background: none;
+		font-size: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+		transition: color 0.3s, background-color 0.3s;
+		outline: none;
+
+		&--special {
+			background-color: $special-color;
+		}
+
+		&:hover,
+		&:focus {
+			color: $secondary-color;
+			background-color: $main-color;
+		}
+	}
+
+	&__more {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5em;
+		align-self: center;
+		margin-top: 2em;
+		font-size: 2.2rem;
+
+		a {
+			padding: 0.5em 1.5em;
+			color: $main-color;
+			background-color: $special-color;
+			text-transform: uppercase;
+			border-radius: 8px;
+			transition: color 0.3s, background-color 0.3s;
+			outline: none;
+
+			&:hover,
+			&:focus {
+				color: $secondary-color;
+				background-color: $main-color;
+			}
+		}
+	}
+}

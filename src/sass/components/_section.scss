@@ -1,0 +1,15 @@
+@use '../base/' as *;
+
+.section {
+	&__content {
+		padding: 5em 0;
+	}
+
+	&__title {
+		margin-bottom: 2em;
+		font-size: 3.4rem;
+		font-weight: 450;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
