@@ -18,4 +18,6 @@
 -   [x] Dodać chowanie się nawigacji podczas scrollowania w dół i pojawienie się jej, podczas scrollowania w górę
 -   [ ] Poprawić scroll-padding-top w kontekście działania nawigacji (może współpraca ze scroll-spy??)
 -   [ ] Przerobić odnośnik do podstrony 'Oferta'
--   [ ] Dodać animację banneru na ekranach dekstopowych
+-   [x] Dodać animację banneru na ekranach desktopowych
+-   [ ] Poprawić przejście między animacjami na bannerze po zmniejszeniu szerokości ekranu
+-   [ ] Po ukończeniu strony głównej, dobrać czcionki i grubości czcionki aby lepiej oddawały pierwotny design

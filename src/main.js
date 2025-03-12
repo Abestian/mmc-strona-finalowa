@@ -11,7 +11,7 @@ const banner = document.querySelector('.banner');
 const bannerTextBorder = document.querySelector('.banner__text-border');
 const bannerText = document.querySelectorAll('.banner__text-list');
 
-const footerLinks = document.querySelectorAll('.footer-link');
+const footerLinks = document.querySelectorAll('.footer__link');
 
 const handleNav = () => {
 	navMobile.classList.toggle('navbar-mobile-active');
