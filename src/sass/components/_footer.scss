@@ -1,0 +1,57 @@
+@use '../base/' as *;
+
+.footer {
+	padding: 1em 0;
+	background-color: $footer-color;
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1em 1.25em;
+		margin: 0 auto;
+		max-width: max-content;
+		color: $main-color;
+		cursor: pointer;
+	}
+
+	&__logo-img {
+		height: 48px;
+	}
+
+	&__logo-title {
+		font-size: 4.8rem;
+		font-weight: 450;
+	}
+
+	&__nav {
+		list-style: none;
+	}
+
+	&__nav-item {
+		margin-bottom: 1em;
+	}
+
+	&__nav-title {
+        margin-bottom: .25em;
+	}
+
+	&__nav-list {
+		display: flex;
+		gap: 1em;
+		list-style: none;
+	}
+
+	&__link {
+		color: $main-color;
+		&:hover,
+		&:focus {
+			opacity: 0.7;
+		}
+	}
+
+	&__copyright {
+		margin-top: 2em;
+		text-align: center;
+	}
+}

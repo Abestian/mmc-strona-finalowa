@@ -21,6 +21,11 @@
 		text-align: center;
 		border-radius: 8px;
 		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+		transition: scale 0.3s;
+
+		&:hover {
+			scale: 1.05;
+		}
 	}
 
 	&__card-title {
@@ -90,7 +95,7 @@
 		align-items: center;
 		gap: 0.5em;
 		align-self: center;
-		margin-top: 2em;
+		margin-top: clamp(2em, 5vw, 4em);
 		font-size: 2.2rem;
 
 		a {
@@ -107,21 +112,6 @@
 				color: $secondary-color;
 				background-color: $main-color;
 			}
-		}
-	}
-}
-
-@media (width > 1200px) {
-	.offer {
-		&__card {
-			transition: scale 0.3s;
-			&:hover {
-				scale: 1.05;
-			}
-		}
-
-		&__more {
-			margin-top: 4em;
 		}
 	}
 }
