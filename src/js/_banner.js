@@ -1,10 +1,10 @@
 'use strict';
 
-export const banner = document.querySelector('.banner');
+const banner = document.querySelector('.banner');
 const bannerText = document.querySelectorAll('.banner__text-list');
 const bannerTextBorder = document.querySelector('.banner__text-border');
 
-export const animateText = () => {
+const animateText = () => {
 	if (!bannerTextBorder || bannerText.length === 0) return;
 
 	bannerTextBorder.classList.remove('animation-large-active');
@@ -14,7 +14,7 @@ export const animateText = () => {
 	});
 };
 
-export function animateTextWithBorder() {
+function animateTextWithBorder() {
 	if (!bannerTextBorder || bannerText.length === 0) return;
 
 	if (isInViewport(banner)) {
@@ -26,7 +26,7 @@ export function animateTextWithBorder() {
 	}
 }
 
-export function isInViewport(item) {
+function isInViewport(item) {
 	const bounding = item.getBoundingClientRect();
 	return (
 		bounding.top >= -item.offsetHeight &&
@@ -35,3 +35,15 @@ export function isInViewport(item) {
 		bounding.bottom <= window.innerHeight + item.offsetHeight
 	);
 }
+
+export const handleBannerAnimation = () => {
+	const width = window.innerWidth;
+
+	if (width > 620) {
+		if (isInViewport(banner)) {
+			animateTextWithBorder();
+		}
+	} else {
+		animateText();
+	}
+};

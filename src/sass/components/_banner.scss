@@ -57,10 +57,16 @@
 	.banner {
 		height: 400px;
 		background-image: url('../assets/images/banner-large.jpg');
+		overflow: hidden;
 
 		&__text-border {
 			height: 9em;
+			transform: translateX(1000%);
 			text-align: center;
+		}
+
+		&__text {
+			transform: translateX(1000%);
 		}
 
 		&__text-list:last-child {
@@ -68,7 +74,8 @@
 		}
 
 		.animation-large-active {
-			animation: textBorderShake 1.25s linear;
+			animation: textBorderShake 1.25s linear forwards;
+			animation-delay: 0.25s;
 		}
 	}
 }
