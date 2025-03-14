@@ -48,18 +48,35 @@ footerLinks.forEach(item => {
 
 burgerBtn.addEventListener('click', handleNav);
 
-window.addEventListener('scroll', function () {
-	if (isInViewport(banner) && document.documentElement.clientWidth > 620) {
-		bannerTextBorder.classList.add('animation-active');
-		bannerText.forEach(text => {
-			text.classList.add('animation-active');
-		});
+
+const checkScreenSize = () => {
+	const width = window.innerWidth;
+
+	if (width > 620) {
+		animateTextWithBorder();
 	} else {
-		bannerText.forEach(text => {
-			text.classList.add('animation-active');
-		});
+		animateText();
 	}
-});
+};
+
+const animateText = () => {
+	bannerTextBorder.classList.remove('animation-large-active');
+	bannerText.forEach(text => {
+		text.classList.add('animation-small-active');
+		text.classList.remove('animation-large-active');
+	});
+};
+
+const animateTextWithBorder = () => {
+	bannerTextBorder.classList.add('animation-large-active');
+	bannerText.forEach(text => {
+		text.classList.add('animation-large-active');
+		text.classList.remove('animation-small-active');
+	});
+};
+
+window.addEventListener('load', checkScreenSize);
+window.addEventListener('resize', checkScreenSize);
 
 let lastScrollTop = 0;
 

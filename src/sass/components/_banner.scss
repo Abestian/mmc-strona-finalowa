@@ -38,7 +38,7 @@
 		font-weight: 600;
 	}
 
-	.animation-active {
+	.animation-small-active {
 		animation: movingText 10s linear infinite;
 	}
 
@@ -67,7 +67,7 @@
 			display: none;
 		}
 
-		.animation-active {
+		.animation-large-active {
 			animation: textEnter 1s linear;
 		}
 	}
