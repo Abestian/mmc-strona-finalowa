@@ -39,7 +39,7 @@
 	}
 
 	.animation-small-active {
-		animation: movingText 10s linear infinite;
+		animation: textVerticalScroll 10s linear infinite;
 	}
 
 	&__shadow {
@@ -68,7 +68,7 @@
 		}
 
 		.animation-large-active {
-			animation: textEnter 1s linear;
+			animation: textBorderShake 1.25s linear;
 		}
 	}
 }

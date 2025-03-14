@@ -1,15 +1,28 @@
 'use strict';
 
 import './sass/main.scss';
+import { animateText, animateTextWithBorder, isInViewport, banner } from './js/banner';
+
+const checkScreenSize = () => {
+	const width = window.innerWidth;
+
+	if (width > 620) {
+		if (isInViewport(banner)) {
+			animateTextWithBorder();
+		}
+	} else {
+		animateText();
+	}
+};
+
+window.addEventListener('load', checkScreenSize);
+window.addEventListener('resize', checkScreenSize);
+window.addEventListener('scroll', checkScreenSize);
 
 const navbar = document.querySelector('.navbar');
 const burgerBtn = document.querySelector('.navbar__burger');
 const navMobile = document.querySelector('.navbar-mobile');
 const navItems = document.querySelectorAll('.navbar-mobile__link');
-
-const banner = document.querySelector('.banner');
-const bannerTextBorder = document.querySelector('.banner__text-border');
-const bannerText = document.querySelectorAll('.banner__text-list');
 
 const footerLinks = document.querySelectorAll('.footer__link');
 
@@ -28,16 +41,6 @@ const closeNav = () => {
 	);
 };
 
-function isInViewport(item) {
-	const bounding = item.getBoundingClientRect();
-	return (
-		bounding.top >= -item.offsetHeight &&
-		bounding.left >= -item.offsetWidth &&
-		bounding.right <= window.innerWidth + item.offsetWidth &&
-		bounding.bottom <= window.innerHeight + item.offsetHeight
-	);
-}
-
 footerLinks.forEach(item => {
 	item.addEventListener('click', e => {
 		const link = e.target.innerHTML;
@@ -47,36 +50,6 @@ footerLinks.forEach(item => {
 });
 
 burgerBtn.addEventListener('click', handleNav);
-
-
-const checkScreenSize = () => {
-	const width = window.innerWidth;
-
-	if (width > 620) {
-		animateTextWithBorder();
-	} else {
-		animateText();
-	}
-};
-
-const animateText = () => {
-	bannerTextBorder.classList.remove('animation-large-active');
-	bannerText.forEach(text => {
-		text.classList.add('animation-small-active');
-		text.classList.remove('animation-large-active');
-	});
-};
-
-const animateTextWithBorder = () => {
-	bannerTextBorder.classList.add('animation-large-active');
-	bannerText.forEach(text => {
-		text.classList.add('animation-large-active');
-		text.classList.remove('animation-small-active');
-	});
-};
-
-window.addEventListener('load', checkScreenSize);
-window.addEventListener('resize', checkScreenSize);
 
 let lastScrollTop = 0;
 
